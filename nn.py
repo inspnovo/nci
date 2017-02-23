@@ -126,6 +126,10 @@ class searchnet:
 
     # 训练，反向传播，最终目标调整权重值
     # TODO 对于反向传播算法的数学理解还要深入，参考知乎上的知识（不是难，而是知识体系有缺失）
+    # 参考：
+    # 1.https://www.zhihu.com/question/27239198/answer/89853077
+    # 2.http://www.cnblogs.com/chyl411/p/5553999.html
+    
     def backPropagate(self, targets, N=0.5):
         # calculate errors for output，输出误差
         output_deltas = [0.0] * len(self.urlids)
